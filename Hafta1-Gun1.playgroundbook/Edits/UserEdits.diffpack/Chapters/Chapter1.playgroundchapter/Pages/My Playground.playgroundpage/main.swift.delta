@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Değişken ve Sabitler
+var name: String = "Muhammed"
+
+var prettyName: String {
+    get {
+        return "Hello, \(name)!"
+    }
+    set {
+        name = "Hello, \(newValue)!"
+    }
+}
+
+let pi: Float = 3.14 
+
+prettyName = "Ayşe"
+
+print("\(prettyName)")
+
+name = "Ali"
+
+print("Hello, \(name)!")
+
+print("Pi is \(Double(pi))")
+
+// Collections
+
+// Array
+var languages = ["C", "C++", "C#"]
+
+languages.append("Swift")
+
+languages.remove(at: .zero)
+
+print(languages)
+
+// Dictionary
+var platformsAndLanguages: [String : String] = ["iOS" : "Swift", "Android" : "Kotlin"]
+
+platformsAndLanguages["Flutter"] = "Dart"
+
+let filteredValues = platformsAndLanguages.filter { $1 == "Dart" }
+
+print(filteredValues)
+
+platformsAndLanguages.removeValue(forKey: "iOS")
+
+print(platformsAndLanguages)
+
+// Control Flow, Functions
+
+let isActive = false
+
+if isActive {
+    print("Active")
+} else {
+    print("Not Active")
+}
+
+for language in languages where language == "C++" {
+    print(language)
+}
+
+//for index in (0...10).reversed() {
+//print(index)
+//}
+
+var index = 10
+while index &gt; 0 {
+    print(index)
+    index -= 1
+}
+
+languages.forEach { item in
+    print(item)
+}
+
+var increasedDigits: [Int] {
+    var digits = [0, 1, 2, 3]
+    
+    digits = digits.map { $0 + 1 }
+    
+    return digits
+}
+
+print(increasedDigits)
+
+var digits = [0, 1, 2, 3]
+func increaseDigits(_ digits: [Int]) -&gt; [Int] {        digits.map { $0 + 1 }
+}
+
+print(increaseDigits(digits))
+
+// Enum, Struct ve Class
+
+enum PatikaAPI {
+    case getLesson(id: String)
+    case getUsers
+    
+    var endpoint: String {
+        switch self {
+        case .getLesson:
+            return "/get-lesson"
+        case .getUsers:
+            return "/get-users"
+        }
+    }
+    
+    var parameters: [String : Any] {
+        switch self {
+        case .getLesson(let id):
+            return ["id" : id]
+        case .getUsers:
+            return ["email" : "deneme@mail.com"]
+        }
+    }
+}
+
+struct -&gt; Value Type (Microsoft Excel)
+class -&gt; Referance Type (Google Sheets)
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 2002}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
